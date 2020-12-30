@@ -97,7 +97,6 @@ a {
   aside {
       background-color: var(--blanco);
       flex: 0 0 300px;
-      float:left;
   }
   .seccion-principal {
       flex: 1;

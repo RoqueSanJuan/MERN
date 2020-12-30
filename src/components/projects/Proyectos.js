@@ -8,7 +8,7 @@ import ListadoTareas from '../task/ListadoTareas';
 const Proyectos = () => {
 
     return(
-        <div className="contedor-app">
+        <div className="contenedor-app">
             <Sidebar/>
             <div className="seccion-principal">
                 <Barra />

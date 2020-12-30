@@ -55,7 +55,7 @@ const NuevoProyecto = () => {
     <Fragment>
       <button
         type="button"
-        className="btn btn-block btn-primartio"
+        className="btn btn-block btn-primario"
         onClick={onClickFormulario}
       >
         Nuevo Proyecto

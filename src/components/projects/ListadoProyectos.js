@@ -14,7 +14,7 @@ const ListadoProyectos = () => {
     }, []);
 
     //Revisar si existen proyectos
-    if(proyectos.lenght === 0) return null;
+    if(proyectos.length === 0) return <p>No existen Proyectos</p>;
 
 
     return(
