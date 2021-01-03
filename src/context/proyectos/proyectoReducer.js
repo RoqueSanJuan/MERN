@@ -19,11 +19,6 @@ export default (state, actions) => {
         ...state,
         proyectos: actions.payload,
       };
-    case OBTNER_PROYECTOS:
-      return {
-        ...state,
-        proyectos: actions.payload,
-      };
     case AGREGAR_PROYECTO:
       return {
         ...state,
@@ -47,8 +42,6 @@ export default (state, actions) => {
           proyectos: state.proyectos.filter(proyecto => proyecto.id !== actions.payload),
           proyecto : null
       }
-
-
     default:
       return state;
   }
