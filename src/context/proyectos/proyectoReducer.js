@@ -4,9 +4,11 @@ import {
   OBTNER_PROYECTOS,
   VALIDAR_FORMULARIO,
   PROYECTO_ACTUAL,
-  ELIMINAR_PROYECTO
+  ELIMINAR_PROYECTO,
+  PROYECTO_ERROR
 } from "../../types";
 
+// eslint-disable-next-line
 export default (state, actions) => {
   switch (actions.type) {
     case FORMULARIO_PROYECTO:
@@ -34,13 +36,18 @@ export default (state, actions) => {
     case PROYECTO_ACTUAL:
         return {
             ...state,
-            proyecto: state.proyectos.filter(proyecto => proyecto.id === actions.payload)
+            proyecto: state.proyectos.filter(proyecto => proyecto._id === actions.payload)
         }
     case ELIMINAR_PROYECTO:
       return {
           ...state,
-          proyectos: state.proyectos.filter(proyecto => proyecto.id !== actions.payload),
+          proyectos: state.proyectos.filter(proyecto => proyecto._id !== actions.payload),
           proyecto : null
+      }
+    case PROYECTO_ERROR:
+      return {
+        ...state,
+        mensaje: actions.payload
       }
     default:
       return state;
